@@ -37,7 +37,7 @@ public class Tasks {
 		this.taskValidator = taskValidator;
 	}
 	@RequestMapping("/tasks/addTask")
-    public String newShow(Model model, @ModelAttribute("task") Task task, HttpSession session, RedirectAttributes flash) {
+    public String newTask(Model model, @ModelAttribute("task") Task task, HttpSession session, RedirectAttributes flash) {
 		User user = (User) session.getAttribute("user");
 		if (user == null) {
 			HashMap<String, Object> map = new HashMap<String, Object> ();
